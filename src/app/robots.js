@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://YOUR-VERCEL-URL.vercel.app/sitemap.xml",
+    sitemap: "https://ultimate-cat.vercel.app/sitemap.xml",
   };
 }

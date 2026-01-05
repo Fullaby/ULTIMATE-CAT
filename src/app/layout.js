@@ -38,11 +38,11 @@ export const metadata = {
     title: "Steven Leonardo — Ultimate Cat Experience",
     description:
       "A unique interactive web experience by Steven Leonardo. Featuring animated transitions, sound design, and experimental UI built with Next.js.",
-    url: "https://YOUR-VERCEL-URL.vercel.app",
+    url: "https://ultimate-cat.vercel.app",
     siteName: "Steven Leonardo",
     images: [
       {
-        url: "https://YOUR-VERCEL-URL.vercel.app/og-image.png",
+        url: "https://ultimate-cat.vercel.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "Steven Leonardo Ultimate Cat Experience",
@@ -57,12 +57,12 @@ export const metadata = {
     title: "Steven Leonardo — Ultimate Cat Experience",
     description:
       "Creative interactive web experiment by Steven Leonardo using Next.js and animation.",
-    images: ["https://YOUR-VERCEL-URL.vercel.app/og-image.png"],
+    images: ["https://ultimate-cat.vercel.app/og-image.png"],
     creator: "@stevenleonardo", // optional
   },
 
   alternates: {
-    canonical: "https://YOUR-VERCEL-URL.vercel.app",
+    canonical: "https://ultimate-cat.vercel.app",
   },
 
   category: "Technology",
