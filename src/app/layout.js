@@ -2,6 +2,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 export const metadata = {
+   icons: {
+    icon: '/ico.png',
+  },
   title: "Steven Leonardo — Ultimate Cat Experience | Creative Web Developer",
   description:
     "Steven Leonardo presents the Ultimate Cat Experience — a creative, interactive web experiment combining animation, music, and modern web technology. Built with Next.js, Framer Motion, and pure chaos.",
