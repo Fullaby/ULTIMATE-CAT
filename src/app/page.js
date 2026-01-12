@@ -6,6 +6,7 @@ export default function Home() {
   const [cats, setCats] = useState([]);
   const [index, setIndex] = useState(0);
   const [stage, setStage] = useState("cats");
+  const [imageLoading, setImageLoading] = useState(true);
 
   const audioRef = useRef(null);
   useEffect(() => {
@@ -18,6 +19,10 @@ export default function Home() {
     }
     fetchCats();
   }, []);
+
+  useEffect(() => {
+    setImageLoading(true);
+  }, [index]);
 
   useEffect(() => {
     if (index === cats.length && cats.length > 0) {
@@ -49,16 +54,16 @@ export default function Home() {
     setIndex((p) => p + 1);
   }
 
-const bounceAnimation = {
-  x: [0, -400, 400, -300, 300, 0],
-  y: [0, -200, -200, 200, 200, 0],
-  transition: {
-    duration: 1.2,    
-    ease: "linear",
-    repeat: 15,      
-    repeatType: "loop",
-  },
-};
+  const bounceAnimation = {
+    x: [0, -400, 400, -300, 300, 0],
+    y: [0, -200, -200, 200, 200, 0],
+    transition: {
+      duration: 1.2,
+      ease: "linear",
+      repeat: 15,
+      repeatType: "loop",
+    },
+  };
 
   return (
     <div className="min-h-screen bg-black text-white flex items-center justify-center overflow-hidden relative">
@@ -66,14 +71,31 @@ const bounceAnimation = {
 
       {stage === "cats" && cats.length > 0 && index < cats.length && (
         <div className="z-10 flex flex-col items-center gap-4">
+          {imageLoading && (
+            <div className="h-64 w-64 flex items-center justify-center rounded text-zinc-400">
+              <span className="loader"></span>
+            </div>
+          )}
+
           <img
             src={cats[index]?.url}
-            className="h-64 w-64 rounded object-cover"
+            className={`h-64 w-64 rounded object-cover ${
+              imageLoading ? "hidden" : "block"
+            }`}
+            onLoad={() => setImageLoading(false)}
+            onError={() => setImageLoading(false)}
+            alt="Cat"
           />
 
           <button
             onClick={nextCat}
-            className="bg-white text-black px-4 py-2 rounded"
+            disabled={imageLoading}
+            className={`px-4 py-2 rounded transition
+        ${
+          imageLoading
+            ? "bg-zinc-400 text-zinc-700 "
+            : "bg-white text-black hover:bg-zinc-200"
+        }`}
           >
             Next Cat 🐱
           </button>
