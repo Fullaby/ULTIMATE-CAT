@@ -45,7 +45,7 @@ export const metadata = {
     siteName: "Steven Leonardo",
     images: [
       {
-        url: "https://ultimate-cat.vercel.app/og-image.png",
+        url: "https://ultimate-cat.vercel.app/ico.png",
         width: 1200,
         height: 630,
         alt: "Steven Leonardo Ultimate Cat Experience",
@@ -60,8 +60,7 @@ export const metadata = {
     title: "Steven Leonardo — Ultimate Cat Experience",
     description:
       "Creative interactive web experiment by Steven Leonardo using Next.js and animation.",
-    images: ["https://ultimate-cat.vercel.app/og-image.png"],
-    creator: "@stevenleonardo", // optional
+    images: ["https://ultimate-cat.vercel.app/ico.png"],
   },
 
   alternates: {
